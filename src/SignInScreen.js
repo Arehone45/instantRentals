@@ -1,5 +1,5 @@
 import { View, Text, StyleSheet , TouchableOpacity , Dimensions, Platform , TextInput} from 'react-native'
-import React from 'react'
+import React,{useState} from 'react'
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import Feather from 'react-native-vector-icons/Feather';
 
