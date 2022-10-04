@@ -1,12 +1,15 @@
 import { View, Text, StyleSheet , Dimensions, Image ,TouchableOpacity } from 'react-native'
 import React from 'react'
 import { MaterialIcons } from '@expo/vector-icons';
+//import * as Animatable from 'react-native-animatable'
 
 const SplashScreen = ({navigation}) => {
   return (
     <View style={styles.container}>
         <View style={styles.header}>
             <Image
+                //animation="bounceIn"
+                //duration="1500"
                 source={require('../assets/logo.png')}
                 style={styles.logo}
                 resizeMode="stretch"
@@ -16,7 +19,7 @@ const SplashScreen = ({navigation}) => {
             <Text style={styles.title}>Ride all around for less.</Text>
             <Text style={styles.text}>Sign in with account</Text>
             <View style={styles.button}>
-                <TouchableOpacity
+                <TouchableOpacity onPress={() => navigation.navigate('SignInScreen')}
                 style={styles.signIn}
                 >
                 <Text style={styles.textSign}>Get Started</Text>
