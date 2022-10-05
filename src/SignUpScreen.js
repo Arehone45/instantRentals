@@ -77,7 +77,7 @@ const signUpUser = () => {
             
           })
           .then(() => {
-            navigation.navigate("Home");
+            navigation.navigate("HomeScreen");
         });
       })
       .catch((error) => {

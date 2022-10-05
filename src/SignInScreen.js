@@ -1,4 +1,4 @@
-import { View, Text, StyleSheet , TouchableOpacity , Dimensions, Platform , TextInput} from 'react-native'
+import { View, Text, StyleSheet , TouchableOpacity , Dimensions, Platform , TextInput , KeyboardAvoidingView , ScrollView} from 'react-native'
 import React,{useState} from 'react'
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import Feather from 'react-native-vector-icons/Feather';
@@ -49,7 +49,7 @@ const handleSubmition = () => {
             .database()
             .ref(`Users/${userId}/PersonalData`)
             .update({lastSeen: Date.now(),})
-            navigation.navigate("Home");
+            navigation.navigate("HomeScreen");
         
         })
         .catch((error) => {
@@ -61,10 +61,14 @@ const handleSubmition = () => {
   };
 
   return (
-    <View style={styles.container}>
-        <View style={styles.header}>
+    <View style={styles.container} >
+        <View style={styles.header }>
             <Text style={styles.text_header}>Welcome!</Text>
+            
         </View>
+        
+                
+        
         <View style={styles.footer}>
             
             <Text style={styles.text_footer}>Email</Text>
@@ -144,6 +148,7 @@ const handleSubmition = () => {
             
             
         </View>
+        
     </View>
   );
 };
