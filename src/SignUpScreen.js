@@ -77,7 +77,7 @@ const signUpUser = () => {
             
           })
           .then(() => {
-            alert('Successful')
+            navigation.navigate("Home");
         });
       })
       .catch((error) => {

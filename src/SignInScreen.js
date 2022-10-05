@@ -2,8 +2,7 @@ import { View, Text, StyleSheet , TouchableOpacity , Dimensions, Platform , Text
 import React,{useState} from 'react'
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import Feather from 'react-native-vector-icons/Feather';
-
-
+import firebase from 'firebase';
 
 
 const SignInScreen = ({navigation}) => {
@@ -50,7 +49,8 @@ const handleSubmition = () => {
             .database()
             .ref(`Users/${userId}/PersonalData`)
             .update({lastSeen: Date.now(),})
-            alert('Successful')
+            navigation.navigate("Home");
+        
         })
         .catch((error) => {
           alert(error);
@@ -139,7 +139,6 @@ const handleSubmition = () => {
                     color: '#009387',
                 }]}>Sign Up</Text>
                 </TouchableOpacity>      
-
                     
             </View>
             

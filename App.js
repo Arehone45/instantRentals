@@ -7,6 +7,7 @@ import SignInScreen from './src/SignInScreen';
 import SignUpScreen from './src/SignUpScreen';
 
 import firebase from 'firebase';
+import Home from './src/Home';
 
 // Import the functions you need from the SDKs you need
 // TODO: Add SDKs for Firebase products that you want to use
@@ -33,6 +34,7 @@ export default function App() {
         <Stack.Screen name="SplashScreen" component={SplashScreen} options={{headerShown: false}}/>
         <Stack.Screen name="SignInScreen" component={SignInScreen} options={{headerShown: true}}/>
         <Stack.Screen name="SignUpScreen" component={SignUpScreen} options={{headerShown: true}}/>
+        <Stack.Screen name="Home" component={Home} options={{headerShown: true}}/>
       </Stack.Navigator>
     </NavigationContainer>
   );
